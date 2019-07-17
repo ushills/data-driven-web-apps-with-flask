@@ -1,0 +1,20 @@
+.task {
+    font-weight: bold;
+}
+
+.waiting {
+    color: #888;
+    font-weight: lighter;
+}
+
+.task_description {
+    padding-left: 20px;
+    font-weight: lighter;
+    font-size: 0.8em;
+}
+
+.tag {
+    text-align: right;
+    color: blue;
+
+}
