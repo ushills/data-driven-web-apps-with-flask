@@ -17,11 +17,13 @@ def get_task_data():
             "title": "Waiting for someone",
             "description": "who am I waiting for",
             "waiting": "Mark",
+            "tag": "work",
         },
         {
             "action": "next",
             "title": "Review proposals",
             "description": "Tom has list on desk",
+            "tag": "project 1",
         },
     ]
 

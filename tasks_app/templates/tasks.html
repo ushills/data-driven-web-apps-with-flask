@@ -19,11 +19,6 @@
     <div class="container">
         {% for t in tasks %}
         <div class="task">
-            {% if t.waiting %}
-            <span class="waiting">
-                {{ t.waiting }}
-            </span>
-            {% endif %}
 
             <span class="task">
                 {{ t.title }}
@@ -32,6 +27,13 @@
             <span class="tag">
                 {{ t.tag }}
             </span>
+
+            {% if t.waiting %}
+            <span class="waiting">
+                {{ t.waiting }}
+            </span>
+            {% endif %}
+
             <br>
             <span class="task_description">
                 {{ t.description}}
