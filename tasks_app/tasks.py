@@ -29,10 +29,6 @@ def get_task_data():
 
 
 @app.route("/")
-def index():
-    return "Hello World!"
-
-
 @app.route("/tasks")
 def tasks():
     tasks = get_task_data()
