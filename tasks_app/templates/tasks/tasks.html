@@ -1,0 +1,29 @@
+{% extends "shared/_layout.html" %}
+{% block main_content %}
+
+
+{% for t in tasks %}
+<div class="task">
+
+    <span class="task">
+        {{ t.title }}
+    </span>
+
+    <span class="tag">
+        {{ t.tag }}
+    </span>
+
+    {% if t.waiting %}
+    <span class="waiting">
+        {{ t.waiting }}
+    </span>
+    {% endif %}
+
+    <br>
+    <span class="task_description">
+        {{ t.description}}
+    </span>
+</div>
+{% endfor %}
+
+{% endblock %}

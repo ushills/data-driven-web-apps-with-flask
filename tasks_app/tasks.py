@@ -33,7 +33,7 @@ def get_task_data():
 def tasks():
     tasks = get_task_data()
     # return {"tasks": tasks}
-    return flask.render_template("tasks.html", tasks=tasks)
+    return flask.render_template("tasks/tasks.html", tasks=tasks)
 
 
 if __name__ == "__main__":

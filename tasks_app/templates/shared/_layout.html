@@ -2,8 +2,9 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <title>{% block title %}Tasks App{% endblock %}</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
@@ -11,35 +12,20 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- Custom Site CSS -->
-    <link rel="stylesheet" href="/static/css/tasks.css">
+    <link rel="stylesheet" href="/static/css/site.css">
+
+    {% block additional_css %}{% endblock %}
 </head>
 
 <body>
 
-    <div class="container">
-        {% for t in tasks %}
-        <div class="task">
+    <nav>
+        <a href="/">Tasks</a>
+        <a href="/about">About</a>
+    </nav>
 
-            <span class="task">
-                {{ t.title }}
-            </span>
-
-            <span class="tag">
-                {{ t.tag }}
-            </span>
-
-            {% if t.waiting %}
-            <span class="waiting">
-                {{ t.waiting }}
-            </span>
-            {% endif %}
-
-            <br>
-            <span class="task_description">
-                {{ t.description}}
-            </span>
-        </div>
-        {% endfor %}
+    <div class="main_content">
+        {% block main_content %}{% endblock %}
     </div>
 
     <!-- Bootstrap JavaScript -->
@@ -53,6 +39,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-</body>
 
-</html>
+    {% block additional_js %}{% endblock %}
+
+</body>
